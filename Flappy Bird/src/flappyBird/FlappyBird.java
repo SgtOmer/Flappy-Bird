@@ -1,6 +1,7 @@
 package flappyBird;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -44,8 +45,9 @@ public class FlappyBird implements ActionListener, MouseListener{
 		jframe.setTitle("Flappy Bird");
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jframe.addMouseListener(this);
-		jframe.setSize(WIDTH, HEIGHT);
+		jframe.getContentPane().setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		jframe.setResizable(false);
+		jframe.pack();
 		jframe.setVisible(true);
 		
 		bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 20 ,20);
